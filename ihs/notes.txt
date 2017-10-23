@@ -1,0 +1,106 @@
+```bash
+curl -v -XPUT $API_HOST/users/5/config/dashboard -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node dashboard.json.js)"
+curl -v -XPUT $API_HOST/users/5/config/dashboards -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node dashboards.json.js)"
+curl -v -XPUT $API_HOST/users/5/config/deviceLabels -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node deviceLabels.json.js)"
+curl -v -XPUT $API_HOST/users/5/config/measurementThresholds -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node measurementThresholds.json.js)"
+curl -v -XPUT $API_HOST/jobs/ihsMeasurementThresholds -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node ihsMeasurementThresholds.json.js)"
+curl -v -XPUT $API_HOST/userGroups/ihs -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"name": "IHS"}'
+curl -v -XPUT $API_HOST/users/5/groups/ihs -H "X-Auth-Token: $AUTH_TOKEN"
+
+curl -v -XPUT $API_HOST/deviceGroups/ihsAbuja -d '{"name":"Abuja"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsAsaba -d '{"name":"Asaba"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsEnugu -d '{"name":"Enugu"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsIbadan -d '{"name":"Ibadan"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsKano -d '{"name":"Kano"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsLagos -d '{"name":"Lagos"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/deviceGroups/ihsPortHarcourt -d '{"name":"Port Harcourt"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+
+curl -v -XPUT $API_HOST/devices/6f9f8ff40a2546ae/groups/ihsLagos -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/ae5fc2631f1846ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/9fdcfa6c113b46ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/5465b191003c46ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/df585e9b0d1146ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/4d73c9be051746ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/30a211a7051346ae/groups/ihsEnugu -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/b5e6246b0e2a46ae/groups/ihsEnugu -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/1fd426220c3e46ae/groups/ihsEnugu -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/07b3d7ed011346ae/groups/ihsPortHarcourt -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/78aed650002246ae/groups/ihsPortHarcourt -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/4a8eb600063e46ae/groups/ihsEnugu -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/bb1deb04102846ae/groups/ihsPortHarcourt -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/09849c2c0f1946ae/groups/ihsPortHarcourt -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/f1dea6b0021144ae/groups/ihsPortHarcourt -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/604ad32f053b46ae/groups/ihsEnugu -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/44308547181a46ae/groups/ihsAsaba -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/5d8edca2062d44ae/groups/ihsAsaba -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/3503345d012546ae/groups/ihsAsaba -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/e3f8dcd2031b46ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/e9778516022646ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/5cb23e6d0f3b46ae/groups/ihsIbadan -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/dedd75e80f3546ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/5c1bfdce021846ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/45f31cc8041346ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/bfd548ec072c46ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/38cced490e0346ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/a0187cc3023446ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/114acac80e2846ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/f806e16d023d46ae/groups/ihsAbuja -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/5ae496d70c3d46ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/47fa23240c3846ae/groups/ihsKano -H "X-Auth-Token: $AUTH_TOKEN" | jq
+
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsLagos/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsIbadan/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsAbuja/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsEnugu/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsPortHarcourt/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsAsaba/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/deviceGroup.read.ihsKano/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.6f9f8ff40a2546ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.ae5fc2631f1846ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.9fdcfa6c113b46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.5465b191003c46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.df585e9b0d1146ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.4d73c9be051746ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.30a211a7051346ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.b5e6246b0e2a46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.1fd426220c3e46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.07b3d7ed011346ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.78aed650002246ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.4a8eb600063e46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.bb1deb04102846ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.09849c2c0f1946ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.f1dea6b0021144ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.604ad32f053b46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.44308547181a46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.5d8edca2062d44ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.3503345d012546ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.e3f8dcd2031b46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.e9778516022646ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.5cb23e6d0f3b46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.dedd75e80f3546ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.5c1bfdce021846ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.45f31cc8041346ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.bfd548ec072c46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.38cced490e0346ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.a0187cc3023446ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.114acac80e2846ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.f806e16d023d46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.5ae496d70c3d46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/ihs/permissions/device.read.47fa23240c3846ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+```
+
+IHS ACL
+	ihs-demo@example.com, banaan01
+	users/2/permissions/acl/allow
+	users/2/permissions/deviceGroup/allow
+	users/2/permissions/job/allow
+	users/2/permissions/user.read.5/allow
+	users/2/permissions/userGroup.read.5/allow
+	users/5/permissions/user.read.5/allow
+	users/5/permissions/user.update.5/allow
+	userGroups/ihs/permissions/userGroup.read.5/allow
+	userGroups/ihs/permissions/device.read.0fafd905191c46ae/allow
+	userGroups/ihs/permissions/device.read.82891181062246ae/allow
+	userGroups/ihs/permissions/device.read.1dcf0ef7112446ae/allow
+	userGroups/ihs/permissions/job.read.ihsMeasurementThresholds/allow

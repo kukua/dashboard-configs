@@ -1,0 +1,18 @@
+```bash
+curl -v -XPUT $API_HOST/userGroups/demo -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"name": "Demo Team"}' | jq
+curl -v -XPUT $API_HOST/users/7/groups/demo -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/7/permissions/userGroup.read.demo/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/7/permissions/user.read.7/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/demo/config/dashboards -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d "$(node dashboards.json.js)" | jq
+
+curl -v -XPUT $API_HOST/deviceGroups/dashboardDemo -d '{"name":"Tanzania"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/userGroups/demo/permissions/deviceGroup.read.dashboardDemo/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/7/permissions/deviceGroup.read.dashboardDemo/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+
+curl -v -XPUT $API_HOST/userGroups/demo/permissions/device.read.54ab655f0f2746ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/54ab655f0f2746ae/groups/dashboardDemo -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/demo/permissions/device.read.33254d20053946ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/33254d20053946ae/groups/dashboardDemo -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/demo/permissions/device.read.17764371021a46ae/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/17764371021a46ae/groups/dashboardDemo -H "X-Auth-Token: $AUTH_TOKEN" | jq
+```

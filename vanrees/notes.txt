@@ -1,0 +1,20 @@
+```bash
+curl -v -XPUT $API_HOST/userGroups/vanrees -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"name": "Van Rees"}' | jq
+curl -v -XPUT $API_HOST/users/8/groups/vanrees -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/8/permissions/userGroup.read.vanrees/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+
+curl -v -XPUT $API_HOST/deviceGroups/vanreesmvp -d '{"name":"Van Rees MVP"}' -H "X-Auth-Token: $AUTH_TOKEN" -H 'Content-Type: application/json' | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/deviceGroup.read.vanreesmvp/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063695/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063695/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063720/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063720/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063717/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063717/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063740/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063740/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063688/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063688/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/devices/6151853100063661/groups/vanreesmvp -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/userGroups/vanrees/permissions/device.read.6151853100063661/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+```

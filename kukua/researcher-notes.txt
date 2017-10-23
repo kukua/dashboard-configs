@@ -1,0 +1,3 @@
+curl -v -XPUT $API_HOST/users/9/permissions/user.read.9/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/9/groups/kukua -H "X-Auth-Token: $AUTH_TOKEN" | jq
+curl -v -XPUT $API_HOST/users/9/permissions/userGroup.read.kukua/allow -H "X-Auth-Token: $AUTH_TOKEN" | jq
